@@ -26,6 +26,5 @@ app.use((error, request, response, next)=> {
    })
 })
 
-
 const PORT = 2000;
-app.listen(PORT, () => console.log(`server ${PORT}`))
+app.listen(PORT, () => console.log(`server ${PORT}`));
