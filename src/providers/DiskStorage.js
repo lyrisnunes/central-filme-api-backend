@@ -1,5 +1,5 @@
 const fs = require("fs"); // lidar manipulação de arquivo
-const path = require("path");
+const path = require("path"); // lidar com diratórios
 const uploadConfig = require("../config/upload");
 
 class DiskStorage{ // função
@@ -13,7 +13,7 @@ class DiskStorage{ // função
 
    // função para deletar
    async deleteFile(file){
-      const filePath = path.resolve(uploadConfig.uploadConfig, file); // buscar arquivo
+      const filePath = path.resolve(uploadConfig.UPLOADS_FOLDER, file); // buscar arquivo
 
       // tratamento de exceção
       try{

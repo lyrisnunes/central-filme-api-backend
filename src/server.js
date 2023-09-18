@@ -7,6 +7,12 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
+const cors = require("cors");
+app.use(cors()); // habilita para que o back end aceite as requisição do frontend
+
+const uploadConfig = require("./config/upload");
+app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER));
+
 const routes = require("./routes");
 app.use(routes);
 

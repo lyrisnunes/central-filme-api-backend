@@ -6,7 +6,7 @@ const crypto = require("crypto");
 //  Pasta temporaria
 const TMP_FOLDER = path.resolve(__dirname, "..", "..", "tmp"); 
 // pasta onde arquivo vão ficar
-const UPLOADS_FOLDER = path.resolve(__dirname, "uploads");
+const UPLOADS_FOLDER = path.resolve(TMP_FOLDER, "uploads");
 
 const MULTER = {
    storage: multer.diskStorage({
