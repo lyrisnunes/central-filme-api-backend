@@ -1,5 +1,5 @@
+require("dotenv/config");
 require("express-async-errors");
-
 const migrationRun = require("./database/sqlite/migrations");
 migrationRun();
 
@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 const cors = require("cors");
-app.use(cors()); // habilita para que o back end aceite as requisição do frontend
+app.use(cors()); 
 
 const uploadConfig = require("./config/upload");
 app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER));
@@ -32,5 +32,5 @@ app.use((error, request, response, next)=> {
    })
 })
 
-const PORT = 2000;
+const PORT = process.env.SERVER_PORT || 2000;
 app.listen(PORT, () => console.log(`server ${PORT}`));
