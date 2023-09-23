@@ -1,7 +1,6 @@
 const fs = require("fs"); // lidar manipulação de arquivo
 const path = require("path"); // lidar com diratórios
 const uploadConfig = require("../config/upload");
-
 class DiskStorage{ // função
    async saveFile(file){
       await fs.promises.rename(//para poder mudar arquivo de lugar 
