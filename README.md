@@ -1,6 +1,5 @@
 # Estudos praticos de Backend.
 
-## Em desenvolvimento ⏳
 
 ## 🔧 Tecnologias
 
