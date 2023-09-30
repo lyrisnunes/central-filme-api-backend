@@ -1,4 +1,10 @@
-# Estudos praticos de Backend.
+# Central filmes
+
+<h1>
+         <img src="src/img/banner.png" >
+</h1>
+
+Aplicação backend com Node.js, onde usuário pode cadastrar um filme, preenche com nome, descrição, notas do filme.
 
 
 ## 🔧 Tecnologias
